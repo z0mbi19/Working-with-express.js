@@ -1,0 +1,16 @@
+extends layouts/main-layouts.pug
+block pageTitle
+    title #{PageTitle}
+
+block styles 
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/forms.css")
+    link(rel="stylesheet", href="/css/product.css")
+
+block content
+    main
+        form.product-from(action="/admin/product", method="POST")
+            .form-control
+                label(for="title") Title
+                input(type="text," name="title", id="title")
+            button.btn(type="submit") Add Product
