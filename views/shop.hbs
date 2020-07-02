@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> {{ pageTitle }} </title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a class="active" href="/">Shop</a></li>
+                <li class="main-header__item">
+                    <a href="/admin/add-product">Add-Product</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{# if hasProduct}}
+        <div class="grid">
+
+            <article class="card.product-item">
+                <header class="card__header">
+                    <h1 class="product__title" />
+                </header>
+                <div class="card__image">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41XObagHvKL._SX326_BO1,204,203,200_.jpg"
+                        , alt="Capitalism and freedom" />
+
+                </div>
+                <div class="card__content">
+                    <h2 class="product__price">$16.29</h2>
+                    <p class="product__description">How can we benefit from the promise of government while avoiding the
+                        threat it poses to individual freedom? In this classic book, Milton Friedman provides the
+                        definitive statement of his immensely influential economic philosophy—one in which competitive
+                        capitalism serves as both a device for achieving economic freedom and a necessary condition for
+                        political freedom. The result is an accessible text that has sold well over half a million
+                        copies in English, has been translated into eighteen languages, and shows every sign of becoming
+                        more and more influential as time goes on.</p>
+
+                </div>
+                <div class="card__action">
+                    <button class="btn">Add to card</button>
+                </div>
+
+            </article>
+        </div>
+        {{else}}
+        <h1>No product found</h1>
+        {{/if}}
+
+    </main>
+</body>
+
+</html>
